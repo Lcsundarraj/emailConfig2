@@ -71,17 +71,17 @@
          </section>
 
          <section class="container mt-4 bg bg-outline-secondary">
-            <!-- <div class="row">
-                <div class="col-2">To</div>
-                <div class="col-2">Subject</div>
-                <div class="col-6">Message</div>
-                <div class="col-2"></div>
-            </div> -->
+            <div class="row">
+                <div class="col-3 text-left font-weight-bold">Receiver</div>
+                <div class="col-2 text-left font-weight-bold">Subject</div>
+                <div class="col-6 text-left font-weight-bold">Message</div>
+                <div class="col-1"></div>
+            </div>
             {% for p in all_mail %}
                 <div class="row bg bg-light rounded  p-1 mb-1">
-                    <div class="col-3 text-left">{{p["receiver"]}}</div>
+                    <div class="col-3 text-left text-truncate">{{p["receiver"]}}</div>
                     <div class="col-2 text-left">{{p["sub"]}}</div>
-                    <div class="col-6 text-left">{{p["Message"]}}</div>
+                    <div class="col-6 text-left text-truncate">{{p["Message"]}}</div>
                     <div class="col-1 text-right"><button type="button" class="btn text-dark"><i class="fa fa-plus"></i></button></div>
                 </div>
             {% endfor %}
